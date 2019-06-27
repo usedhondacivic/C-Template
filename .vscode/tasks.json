@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build Main",
+            "label": "Build with Mingw",
             "type": "shell",
             "command": "g++",
             "args": [
@@ -15,6 +15,20 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Build with Clang",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++17",
+                "-stdlib=libc++",
+                "Main.cpp",
+                "-o",
+                "Main.out",
+                "--debug"
+            ],
+            "group": "build"
         }
     ]
 }
