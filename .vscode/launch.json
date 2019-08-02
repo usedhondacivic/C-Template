@@ -7,10 +7,10 @@
              "request": "launch",
              "program": "${workspaceFolder}/Main.exe",
              "args": [],
-             "stopAtEntry": true,
+             "stopAtEntry": false,
              "cwd": "${workspaceFolder}",
              "environment": [],
-             "externalConsole": true,
+             "externalConsole": false,
              "MIMode": "gdb",
              "miDebuggerPath": "D:/mingw-w64/mingw64/bin/gdb.exe",
              "setupCommands": [
@@ -20,6 +20,23 @@
                      "ignoreFailures": true
                  }
              ]
-         }
+         },
+         {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Main.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "logging": {
+                "trace": true,
+                "traceResponse": true,
+                "engineLogging": true
+            }
+        }
      ]
  }
